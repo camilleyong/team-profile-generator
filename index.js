@@ -49,6 +49,7 @@ const internPrompt = [
         name: "school",
 }]
 
+// start with the manager prompt
 function start () {
     console.log("Please enter the manager's information.")
     const managerQuestions = generalQuestions.concat(managerPrompt);
@@ -68,7 +69,7 @@ function start () {
             additionalEmployee();
             
         })}
-
+// if they want to add another employee
 function additionalEmployee () {
     inquirer.prompt ({
         type: "list",
@@ -85,6 +86,7 @@ function additionalEmployee () {
         });
 }
 
+// either engineer or intern prompt
 function engineerOrIntern(){
     inquirer
     .prompt({
@@ -102,7 +104,7 @@ function engineerOrIntern(){
     });
 }
 
-
+// make engineer card
 function engineerCard () {
     const engineerQuestions = generalQuestions.concat(engineerPrompt);
 
@@ -121,6 +123,7 @@ function engineerCard () {
         })
 }
 
+// make intern card
 function internCard () {
     const internQuestions = generalQuestions.concat(internPrompt);
 
@@ -139,6 +142,7 @@ function internCard () {
         })
 }
 
+// Display the skeleton of the HTML
 function newCard () {
     const html = `
     <!DOCTYPE html>
@@ -174,6 +178,7 @@ function newCard () {
     addCss();
 }
 
+// add css to the cards when deployed
 function addCss () {
     const css = `
     * {

@@ -1,3 +1,5 @@
+// to generate employee card
+
 function createCard (data, lastLine) {
     console.log(data);
     return ` 
@@ -5,7 +7,7 @@ function createCard (data, lastLine) {
     <div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">${data.getName()}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">${data.getRole()}</h6>
+          <h6 class="card-subtitle mb-2 text-muted"><i class="fa-sharp fa-solid fa-user">${data.getRole()}</i></h6>
           <ul>
           <li>ID: ${data.getId()}</li>
           <li><a href="mailto:${data.getEmail()}" class="card-link">${data.getEmail()}</a></li>
@@ -17,6 +19,7 @@ function createCard (data, lastLine) {
     `
 }
 
+// add office number
 function generateManagerCard(data){
     const lastLine = `<li>Office Number: ${data.getOfficeNumber()}</li>`
     return createCard(data, lastLine);
