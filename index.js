@@ -6,9 +6,10 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const cards = require('./dist/createhtml.js');
 
+// EMPTY STRING
 let cardBody = ``;
 
-
+// MAIN QUESTIONS
 const generalQuestions = [
     {
         type: "input",
